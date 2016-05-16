@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/dmtopp/token_auth_playground/issues"
   },
-  "homepage": "https://github.com/dmtopp/token_auth_playground#readme"
+  "homepage": "https://github.com/dmtopp/token_auth_playground#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-jwt": "^3.4.0",
+    "jsonwebtoken": "^6.2.0",
+    "mongoose": "^4.4.17"
+  }
 }
