@@ -1,0 +1,19 @@
+{
+  "name": "token_based_auth",
+  "version": "1.0.0",
+  "description": "some experiments with token-based authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmtopp/token_auth_playground.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmtopp/token_auth_playground/issues"
+  },
+  "homepage": "https://github.com/dmtopp/token_auth_playground#readme"
+}
