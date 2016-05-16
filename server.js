@@ -6,7 +6,7 @@ var express    = require('express'),
     app        = express();
 
 // require the db
-// require('./db/database.js');
+require('./db/database.js');
 
 // set public and views folders
 app.use(express.static(__dirname + '/public'));
