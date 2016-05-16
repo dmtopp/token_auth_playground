@@ -3,7 +3,11 @@ require('dotenv').config();
 var express    = require('express'),
     bodyParser = require('body-parser'),
     exphbs     = require('express-handlebars'),
+    expressJWT = require('express-jwt'),
+    jwt        = require('jsonwebtoken'),
+    morgan     = require('morgan'),
     app        = express();
+
 
 // require the db
 require('./db/database.js');
@@ -18,6 +22,12 @@ app.engine('hbs', exphbs({
   extname: 'hbs'
 }));
 app.set('view engine', 'hbs');
+
+// tell morgan to log our requests
+app.use(morgan('dev'));
+
+// protect /message routes
+app.use('/message', expressJWT({ secret: process.env.SECRET }));
 
 // configure body-parser
 app.use(bodyParser.json());
