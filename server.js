@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // map controllers
 app.use('/', require('./controllers/root_controller'));
-// app.use('/users', require('./controllers/users_controller'));
+app.use('/users', require('./controllers/users_controller'));
 
 // start the server
 var server = app.listen(3000, function(){
