@@ -16,7 +16,7 @@ UsersController.route('/login')
           username: req.body.username,
           awesome: true
         }
-        var token = jwt.sign(profile, process.env.SECRET, { expiresInMinutes: 60 });
+        var token = jwt.sign(profile, process.env.SECRET, { expiresIn: 60*60 });
         res.json({ token: token,
                    success: true,
                    message: 'hey, ya logged in!'});

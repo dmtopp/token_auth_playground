@@ -27,7 +27,7 @@ app.set('view engine', 'hbs');
 app.use(morgan('dev'));
 
 // protect /message routes
-app.use('/message', expressJWT({ secret: process.env.SECRET }));
+// app.use('/message', expressJWT({ secret: process.env.SECRET }));
 
 // configure body-parser
 app.use(bodyParser.json());
@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // map controllers
 app.use('/', require('./controllers/root_controller'));
 app.use('/users', require('./controllers/users_controller'));
+app.use('/message', require('./controllers/message_controller'));
 
 // start the server
 var server = app.listen(3000, function(){
