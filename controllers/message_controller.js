@@ -5,9 +5,9 @@ var express           = require('express'),
     MessageController = express.Router();
 
 MessageController.use(function(req, res, next) {
-  console.log(req.body);
-  console.log(req.headers['x-access-token']);
-  console.log(req.query.token);
+  // console.log(req.body);
+  // console.log(req.headers['x-access-token']);
+  // console.log(req.query.token);
   var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
   if (token) {
@@ -16,7 +16,7 @@ MessageController.use(function(req, res, next) {
         res.send(err);
       } else {
         req.decoded = decoded;
-        // next();
+        next();
       }
     })
   } else {

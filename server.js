@@ -24,7 +24,7 @@ app.engine('hbs', exphbs({
 app.set('view engine', 'hbs');
 
 // tell morgan to log our requests
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 // protect /message routes
 // app.use('/message', expressJWT({ secret: process.env.SECRET }));
