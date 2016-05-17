@@ -1,4 +1,4 @@
-# token_auth_playground
+# Token Authentication Playground
 Some small experiments with token-based authentication and JWTs
 
 _________
@@ -10,6 +10,8 @@ I will be starting by working through the tutorial at https://auth0.com/blog/201
 __________
 
 # Update
+
+_(These notes more for future Dan than the general public, but you can feel free to read them)_
 
 I was able to successfully implement token-based auth for api routes.  When a user successfully logs in, the server sends back a token which is stored in the browser's session storage.  This token can then be sent back via ajax to authenticate further api requests.
 
